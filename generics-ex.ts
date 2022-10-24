@@ -1,3 +1,14 @@
+// Generics example
+class ArrayOfAnything<T> {
+    constructor(public collection: T[]) {}
+    get(index: number): T {
+        return this.collection[index];
+    }
+}
+
+new ArrayOfAnything<string>(["a", "b", "c"]);
+
+// Regular Examples ------------------------------------------------------------- 
 class ArrayOfNumbers {
     constructor(public collection: number[]) {}
     get(index: number): number {
@@ -11,22 +22,8 @@ class ArrayOfStrings {
         return this.collection[index];
     }
 }
+// Regular Examples End ------------------------------------------------------------- 
 
-// Generics example
-class ArrayOfAnything<T> {
-    constructor(public collection: T[]) {}
-    get(index: number): T {
-        return this.collection[index];
-    }
-}
-
-new ArrayOfAnything<string>(["a", "b", "c"]);
-
-function printStrings(arr: string[]): void {
-    for (let i = 0; i < arr.length; i++) {
-        console.log(arr[i]);
-    }
-}
 
 // Generics example with functions
 function printAnything<T>(arr: T[]): void {
@@ -40,6 +37,13 @@ printAnything<string>(["a", "b", "c"]);
 // inferred type
 printAnything(["a", "b", "c"]);
 
+// Regular Examples ------------------------------------------------------------- 
+function printStrings(arr: string[]): void {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+}
+// Regular Examples End ------------------------------------------------------------- 
 
 
 

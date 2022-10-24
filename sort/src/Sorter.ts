@@ -1,3 +1,4 @@
+// Interface not used anywhere in the code, left for reference.
 interface Sortable{
   length: number;
   compare(leftIndex:number, rightIndex:number): boolean
